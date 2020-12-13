@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Castoro:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Archivo:700&display=swap");
+
+.content {
+  min-height: 80vh;
+  padding: 2vh 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 10vw;
+}
+
+.header-logo,
+.footer {
+  text-align: center;
+}
+.footer {
+  padding: 3.85vh;
+}
+.header-btn {
+  margin: 0 20vw;
+  width: 59vw;
+}
+.titleCard {
+  min-height: 90px;
+}
+.cardInfo {
+  position: relative;
+  display: flex;
+  top: 45px;
+}
+.cardAuthor {
+  position: relative;
+  left: 20px;
+  background-color: white;
+  padding: 0 4px;
+  color: rgb(104, 104, 104);
+}
+.cardDate {
+  position: relative;
+  left: 75px;
+  background-color: white;
+  padding: 0 10px;
+  color: rgb(104, 104, 104);
+}
+.header-logo {
+  font-family: "Castoro", serif;
+  font-size: 80px;
+  color: rgb(254 254 255 / 95%);
+  background-color: rgb(19 17 17);
+}
+.footer {
+  color: rgb(254 254 255 / 95%);
+  background-color: rgb(19 17 17);
+}
+.card {
+  background-color: var(--background);
+  display: block;
+  width: 300px;
+  margin: 8px;
+  min-height: 90px;
+  border: 3px solid var(--primary);
+  padding: 15px;
+  box-shadow: 0 0 0 0.1 var(--background), 0 0 0 0 var(--green),
+    0 0 0 0.1 var(--background), 0 0 0 0 var(--yellow),
+    0 0 0 0.1 var(--background), 0 0 0 0 var(--orange);
+  transition: box-shadow 1s, top 1s, left 1s;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.card:hover {
+  top: 40px;
+  left: -40px;
+  box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+    20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
+    30px -30px 0 -3px var(--background), 30px -30px var(--orange);
+  z-index: 999;
+}
+
+:root {
+  --primary: rgb(169, 169, 169);
+  --secondary: #314b43;
+  --background: white;
+  --green: rgb(128, 128, 128);
+  --yellow: rgb(80, 80, 80);
+  --orange: rgb(24, 24, 24);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(
+    var(--secondary) 30%,
+    var(--background) 30%
+  );
+  background-size: 2px 3px;
+  font-family: "Archivo", sans-serif;
+  color: var(--yellow);
+}
+
+.card p {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 14px;
+  font-family: "Archivo Black", "Archivo", sans-serif;
+  font-weight: normal;
+  min-height: 45px;
+}
+
+.card-footer,
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-footer p {
+  margin: 0;
+}
+.card-footer {
+  display: flex;
+  padding: 4px 0;
+}
