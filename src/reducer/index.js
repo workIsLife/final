@@ -1,4 +1,3 @@
-import React from "react";
 import {
   UPDATE_CONTENT,
   DETAIL_CONTENT,

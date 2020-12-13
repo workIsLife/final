@@ -5,11 +5,9 @@ import { Route, Switch } from "react-router-dom";
 
 import "../styles.css";
 //import Card from "../displayCard";
-import getNewsAPI from "../API/getNews";
 import { getNews } from "../action/getNews";
 import Home from "./Home/Home";
 import ItemNews from "./ItemNews/ItemNews";
-import { getItem } from "../action/getItem";
 
 const { Header, Footer, Content } = Layout;
 
