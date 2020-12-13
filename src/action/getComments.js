@@ -8,7 +8,7 @@ export const getComments = (mapUrl, oldState) => {
       console.log("data       ");
       console.log(data);
       console.log(oldState);
-      dispatch({ type: DETAIL_COMMENT, payload: { ...oldState, data } });
+      dispatch({ type: DETAIL_COMMENT, payload: { ...oldState, data } }); //update in reducer oldState
     });
   };
 };

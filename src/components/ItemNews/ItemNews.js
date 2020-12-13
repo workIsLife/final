@@ -21,7 +21,7 @@ function Comments({ kids, comments }) {
 }
 
 function ItemNews(props) {
-  if (props.load) {
+  if (props.isLoad) {
     return <Loader />;
   } else {
     let date = new Date(props.itemNews.time);
@@ -38,7 +38,7 @@ function ItemNews(props) {
           Ссылка: <a href={props.itemNews.url}>{props.itemNews.url}</a>
         </p>
         <button>
-          <Link to="/"></Link>
+          <Link to="/">Go to Home</Link>
         </button>
         <p>Number of comments: {props.itemNews.descendants}</p>
         <Comments kids={props.itemNews.kids} comments={props.comments} />
@@ -50,7 +50,7 @@ export default connect(
   (state, ownProps) => ({
     itemNews: state.itemData,
     comments: state.dataComments,
-    load: state.load,
+    isLoad: state.isLoad,
     ownProps
   }),
   (dispatch) => ({})

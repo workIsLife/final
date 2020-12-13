@@ -9,10 +9,10 @@ export default function Card(props) {
   return (
     <div
       onMouseEnter={(e) => {
-        this.onmouseeneter = mouseEnterCard(e.target);
+        e.onmouseeneter = mouseEnterCard(e.target);
       }}
       onMouseLeave={async (e) => {
-        this.onmouseleave = mouseLeaveCard(e.target);
+        e.onmouseleave = mouseLeaveCard(e.target);
       }}
       className="card"
     >

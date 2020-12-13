@@ -6,8 +6,8 @@ export const getItem = (url) => {
     getItemAPI(url).then((data) => {
       console.log("data       ");
       console.log(data);
-      const load = false;
-      dispatch({ type: DETAIL_CONTENT, payload: { ...data, load } });
+      const isLoad = false;
+      dispatch({ type: DETAIL_CONTENT, payload: { ...data, isLoad } });
     });
   };
 };

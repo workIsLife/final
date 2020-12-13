@@ -1,9 +1,10 @@
 import React from "react";
 import {
   UPDATE_CONTENT,
-  DETAILS_CONTENT,
-  UPDATE_COMMENTS,
-  DETAIL_COMMENT
+  DETAIL_CONTENT,
+  UPDATE_COMMENT,
+  DETAIL_COMMENT,
+  FIRST_CALL
 } from "../action/globalVaribl";
 
 const initialStore = {
@@ -12,16 +13,17 @@ const initialStore = {
 };
 
 export default function reducer(state = initialStore, action) {
-  if (action.type === UPDATE_CONTENT) return action.payload;
-  else if (action.type === DETAILS_CONTENT) {
-    console.log("Detail_contact", action.payload);
+  if (action.type === UPDATE_CONTENT)
     return action.payload;
-  } else if (action.type === UPDATE_COMMENTS)
+  //else if (action.type === 'IS_UPDATE') 
+    //console.log('action IS_UPDATE', {...state, isUpdate: action.payload});
+  //  return {...state, isUpdate: action.payload}
+  else if (action.type === DETAIL_CONTENT)
+    return action.payload;
+  else if (action.type === UPDATE_COMMENT)
     return { ...action.payload, isFirstCall: action.isFirstCall };
   else if (action.type === DETAIL_COMMENT) return action.payload;
-  else if (action.type === "FIRST_CALL") {
-    console.log(action.isFirstCall);
+  else if (action.type === FIRST_CALL)
     return { ...action.payload, isFirstCall: action.isFirstCall };
-  }
-  return [state];
+  return state;
 }

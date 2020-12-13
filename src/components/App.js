@@ -26,7 +26,6 @@ function App(props) {
         >
           click
         </button>
-        {/* <button onClick={props.saveId}>Click2 </button> */}
       </Header>
       <Content className="content">
         <Switch>
@@ -45,18 +44,11 @@ export default connect(
   (state) => ({
     stateCard: state.afterSort,
     oldData: state.beforeSort,
-    load: state.load
+    load: state.isLoad
   }),
   (dispatch) => ({
     toUpdate: (oldData) => {
       dispatch(getNews(oldData));
     },
-    saveId: (id) => {
-      dispatch(
-        getItem(
-          `https://hacker-news.firebaseio.com/v0/item/${id}.json?print=pretty`
-        )
-      );
-    }
   })
 )(App);

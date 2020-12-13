@@ -1,5 +1,5 @@
 import getData from "./getData";
-
+// Рекурсивный обход 
 // async function getComments(mapUrl) {
 //   const comments = {};
 //   // Проверка
@@ -34,10 +34,7 @@ async function getComments(kids) {
 export default async function getItem(url) {
   const itemData = await getData(url);
   // Проверка
-  console.log(itemData);
   const dataComments = await getComments(itemData.kids);
   // let comments = {};
-  console.log("data comments = ");
-  console.log(dataComments);
   return { itemData, dataComments };
 }

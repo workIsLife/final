@@ -29,7 +29,7 @@ function DisplayComments({ comments, expandComment, oldState }) {
                 <h6 className="comment-name">
                   <a href="http://creaticode.com/blog">{item.by}</a>
                 </h6>
-                <span>{123}</span>
+                <span>{new Date(item.time).getDate()}{new Date(item.time).getMonth() + 1}.{new Date(item.time).getFullYear()}</span>
                 <i className="fa fa-reply"></i>
                 <i className="fa fa-heart"></i>
               </div>

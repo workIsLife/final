@@ -69,6 +69,7 @@
   top: 0;
   left: 0;
   cursor: pointer;
+  flex: auto
 }
 
 .card:hover {
@@ -100,7 +101,7 @@ body {
     var(--secondary) 30%,
     var(--background) 30%
   );
-  background-size: 2px 3px;
+  background-size: 3px 3px;
   font-family: "Archivo", sans-serif;
   color: var(--yellow);
 }
